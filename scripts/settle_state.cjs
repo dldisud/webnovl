@@ -2,15 +2,20 @@
 
 const fs = require('fs');
 const path = require('path');
-const { CharacterSheetsSchema } = require('../references/schemas.cjs');
 
 /**
  * Inkos Settler Logic
  *
- * This script proposes updates to character_sheets.json based on chapter results.
- * For now, it outputs a template for the LLM to fill out, 
- * or it can be extended to merge JSON if provided with a delta.
+ * Standalone version: Uses basic JSON validation to avoid node_modules dependency.
  */
+
+function validateSheets(sheets) {
+    if (!Array.isArray(sheets)) throw new Error("Character sheets must be an array.");
+    sheets.forEach((char, i) => {
+        if (!char.name || !char.status) throw new Error(`Character at index ${i} is missing name or status.`);
+    });
+    return true;
+}
 
 async function main() {
   const args = process.argv.slice(2);
@@ -48,12 +53,8 @@ async function main() {
       const deltaContent = fs.readFileSync(deltaPath, 'utf8');
       const updatedSheets = JSON.parse(deltaContent);
       
-      // Validate with Zod
-      const result = CharacterSheetsSchema.safeParse(updatedSheets);
-      if (!result.success) {
-        process.stderr.write(`Failure: Validation failed. ${JSON.stringify(result.error.format(), null, 2)}\n`);
-        process.exit(1);
-      }
+      // Basic validation
+      validateSheets(updatedSheets);
 
       fs.writeFileSync(path.join(projectRoot, 'character_sheets.json'), JSON.stringify(updatedSheets, null, 2));
       process.stdout.write("Success: Character sheets updated and validated.\n");
