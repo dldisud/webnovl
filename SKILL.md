@@ -1,13 +1,13 @@
 ---
-name: inkos-kr
-description: A multi-agent Korean webnovel studio skill for maintaining story consistency using Truth Files. Features 3-Stage Deep Planning (World, Character, Scenario) for high-quality chapter blueprints and commercial optimization.
+name: k-webnovel-studio
+description: A multi-agent Korean webnovel studio framework compatible with Gemini, Claude, and Codex (OpenAI) for maintaining story consistency using Truth Files. Features 3-Stage Deep Planning (World, Character, Scenario) for high-quality chapter blueprints and commercial optimization.
 ---
 
-# Inkos-KR: Korean Webnovel AI Studio
+# K-Webnovel-Studio: Korean Webnovel AI Studio
 
 ## Overview
 
-Inkos-KR is a specialized skill for Korean webnovel writers and studios to maintain high story consistency. It relies on "Truth Files" (JSON/Markdown) and a 3-stage planning process to ensure deep world-building and character integrity.
+K-Webnovel-Studio is a specialized framework for Korean webnovel writers and studios to maintain high story consistency across various LLMs including Gemini, Claude, and Codex. It relies on "Truth Files" (JSON/Markdown) and a 3-stage planning process to ensure deep world-building and character integrity.
 
 ## Core Concepts
 
@@ -17,7 +17,7 @@ Truth Files are documents that define the current state of the story.
 - **Story Bible**: Markdown files containing world rules and plot summaries.
 
 ### 3-Stage Deep Planning
-Before writing, Inkos-KR generates three detailed blueprints:
+Before writing, K-Webnovel-Studio generates three detailed blueprints:
 1. **[Report 1] World & Stage**: Geopolitical context and sensory details.
 2. **[Report 2] Character & Psychology**: Emotional states and class/generation-based reaction differences.
 3. **[Report 3] Scenario & Beat**: Webnovel-optimized pacing and combat analysis (Situation -> Weakness -> Action -> Result).
