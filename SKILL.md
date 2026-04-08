@@ -1,6 +1,6 @@
 ---
 name: k-webnovel-studio
-version: 0.1.0
+version: 0.1.1
 description: A multi-agent Korean webnovel studio framework compatible with Gemini, Claude, and Codex (OpenAI) for maintaining story consistency using Truth Files. Features 3-Stage Deep Planning (World, Character, Scenario) for high-quality chapter blueprints and commercial optimization.
 ---
 

@@ -37,40 +37,37 @@ K-Webnovel-Studio는 컨텍스트와 프롬프트를 생성하여 다양한 LLM(
 
 생성된 프롬프트와 컨텍스트를 각 LLM의 CLI로 전달하여 사용합니다.
 
-#### Gemini CLI
+### Gemini CLI
 ```bash
 # 3단계 상세 플랜 생성
-node scripts/inkos_engine.cjs plan | gemini chat
+k-webnovel plan | gemini chat
 ```
 
 #### Claude CLI
 ```bash
 # 3단계 상세 플랜 생성
-node scripts/inkos_engine.cjs plan | claude
+k-webnovel plan | claude
 ```
 
 #### OpenAI (Codex) CLI
 ```bash
 # 3단계 상세 플랜 생성
-node scripts/inkos_engine.cjs plan | openai chat
+k-webnovel plan | openai chat
 ```
 
 ### 주요 파이프라인 명령어 (Core Commands)
 ```bash
 # 초안용 플랜 생성
-node scripts/inkos_engine.cjs plan
+k-webnovel plan
 
 # 초고 집필
-node scripts/inkos_engine.cjs write
+k-webnovel write
 
 # 설정/안전 검수
-node scripts/inkos_engine.cjs audit proof
+k-webnovel audit proof
 
 # 상업적 최적화 검수
-node scripts/inkos_engine.cjs audit opt
-
-# 상태 정착 제안
-node scripts/inkos_engine.cjs settle_state propose
+k-webnovel audit opt
 ```
 (위 명령어들의 출력을 선호하는 LLM CLI에 파이핑하여 사용하세요.)
 

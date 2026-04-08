@@ -1,0 +1,23 @@
+{
+  "name": "k-webnovel-studio",
+  "version": "0.1.0",
+  "description": "A multi-agent Korean webnovel studio framework",
+  "main": "scripts/inkos_engine.cjs",
+  "bin": {
+    "k-webnovel": "scripts/inkos_engine.cjs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "webnovel",
+    "korean",
+    "ai",
+    "studio"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "zod": "^3.23.8"
+  }
+}
