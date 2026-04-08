@@ -27,4 +27,4 @@ You are the Writer Agent for Inkos-KR. Your mission is to draft a high-quality K
 ## Output Format
 - Output ONLY the chapter prose.
 - NO analysis, NO meta-commentary, NO titles.
-- Word count: Aim for 3000-5000 Korean characters (자수).
+- Word count: Aim for 4500 Korean characters or more (4500자 이상).
